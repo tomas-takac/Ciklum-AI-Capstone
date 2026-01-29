@@ -1,0 +1,32 @@
+graph TD
+    subgraph Ingestion_Layer [Data Preparation & Contextualization]
+        PDF[Capstone PDF] --> Loader[Document Loaders]
+        Code[Source Code .py] --> Loader
+        Config[Configs .yaml/.txt] --> Loader
+        Style[Style Guide] --> Loader
+    end
+
+    subgraph Vector_Storage [RAG Pipeline Design]
+        Loader --> Splitter[Recursive Text Splitter]
+        Splitter --> Embed[HuggingFace Embeddings]
+        Embed --> DB[(ChromaDB)]
+    end
+
+    subgraph Agentic_Workflow [Reasoning & Reflection]
+        User((User)) --> Chain[LangChain Orchestrator]
+        Chain --> Retriever[Vector Store Retriever]
+        DB -.->|Context| Retriever
+        Retriever --> LLM[Ollama: Llama3]
+
+        LLM --> Draft[Initial Draft Generation]
+        Draft --> Reflect[Self-Reflection & Review]
+        Style -.->|Constraints| Reflect
+        Reflect -->|Refine| LLM
+        Reflect --> Output[Final LinkedIn Post]
+    end
+
+    subgraph Infrastructure
+        Docker[Docker Compose]
+        Docker --- rag-app
+        Docker --- ollama-service
+    end

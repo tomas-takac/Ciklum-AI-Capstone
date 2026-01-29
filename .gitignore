@@ -1,0 +1,28 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Local Database (Chroma)
+my_rag_db/
+
+# Python junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Mac system files
+.DS_Store
+
+# User-specific environment variables
+.env
+
+.idea
+
+# Ignore everything in the pdf folder
+resources/pdf/*
+
+# But don't ignore the folder itself or the .gitkeep file
+!resources/pdf/.gitkeep

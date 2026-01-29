@@ -1,0 +1,15 @@
+LINKEDIN STYLE GUIDE & CONSTRAINTS:
+1. LENGTH: Strictly 5-7 sentences.
+2. TONE: Professional, authentic, and concise.
+3. CONTEXT: Must mention the project was created as part of the Ciklum AI Academy.
+4. CONTENT: Explain what the agent does and the technology used to build it (e.g., Python, LangChain, Ollama).
+5. CALL TO ACTION: Must include a mention or tag for @Ciklum.
+6. FORMAT: Use short paragraphs or bullet points for readability.
+
+EXAMPLE OF AN IDEAL POST:
+I’m excited to share the AI Agent I developed as my capstone project for the Ciklum AI Academy!
+This system is a RAG-based agent designed to analyze technical repositories and generate professional documentation.
+I built it using a Python-based stack featuring LangChain for orchestration and Ollama for local LLM inference.
+The core of the system uses a vector database to retrieve context from both PDF guidelines and source code.
+This journey has been a deep dive into agentic reasoning and self-reflection workflows.
+I’m grateful to @Ciklum for the support throughout this transformative learning experience!

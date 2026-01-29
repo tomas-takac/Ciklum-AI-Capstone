@@ -1,0 +1,47 @@
+Haha, it happens to the best of us! It’s the "ignore-ance" trap. Here is the breakdown to get your Ciklum AI Academy Capstone repo clean and your Docker image lean.
+
+1. .gitignore
+Purpose: Keeps the junk out of GitHub. This prevents the 400MB of library files and the database from being uploaded.
+
+Plaintext
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Local Database (Chroma)
+my_rag_db/
+
+# Python junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Mac system files
+.DS_Store
+
+# User-specific environment variables
+.env
+2. .dockerignore
+Purpose: Keeps the junk out of the Docker Image. This makes your rag-app build faster and smaller.
+
+Plaintext
+# Don't copy the local database (it should be built fresh)
+my_rag_db/
+
+# Don't copy your local Mac virtual environment
+.venv/
+venv/
+
+# Don't copy git history into the container
+.git/
+.gitignore
+
+# Don't copy system files
+.DS_Store
+
+# Don't copy the README or diagrams into the running app
+README.md
+architecture.mmd

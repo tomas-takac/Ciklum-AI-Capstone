@@ -1,0 +1,23 @@
+# --- Orchestration & Legacy Support ---
+langchain>=0.3.0
+langchain-core
+langchain-text-splitters
+
+# --- Document Processing ---
+pypdf
+langchain-community
+
+# --- Vector Database ---
+langchain-chroma
+chromadb
+
+# --- Embeddings ---
+langchain-huggingface
+sentence-transformers
+
+# --- LLM Integration ---
+langchain-ollama
+
+# --- Helpers ---
+requests
+python-dotenv
